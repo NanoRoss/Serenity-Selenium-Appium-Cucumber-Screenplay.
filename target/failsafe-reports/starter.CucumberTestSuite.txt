@@ -1,0 +1,63 @@
+-------------------------------------------------------------------------------
+Test set: starter.CucumberTestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 15.162 s <<< FAILURE! - in starter.CucumberTestSuite
+Log in.Try to log in with not valid credentials  Time elapsed: 14.153 s  <<< ERROR!
+net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate class io.appium.java_client.AppiumDriver
+Caused by: net.thucydides.core.webdriver.DriverConfigurationError: 
+WebDriver was unable to create a new instance of type class io.appium.java_client.AppiumDriver
+WebDriver reported the following message: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.conduitreactnative.qa' application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: 'Command '/Users/mariano/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am start -W -n com.conduitreactnative.qa/com.conduitreactnative.MainActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 255'; Command output: 
+Exception occurred while executing 'start':
+java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.conduitreactnative.qa/com.conduitreactnative.MainActivity } from null (pid=12770, uid=2000) not exported from uid 10165
+	at com.android.server.wm.ActivityTaskSupervisor.checkStartAnyActivityPermission(ActivityTaskSupervisor.java:1110)
+	at com.android.server.wm.ActivityStarter.executeRequest(ActivityStarter.java:1024)
+	at com.android.server.wm.ActivityStarter.execute(ActivityStarter.java:713)
+	at com.android.server.wm.ActivityTaskManagerService.startActivityAndWait(ActivityTaskManagerService.java:1562)
+	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:3148)
+	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:598)
+	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:208)
+	at com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)
+	at android.os.ShellCommand.exec(ShellCommand.java:38)
+	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:9197)
+	at android.os.Binder.shellCommand(Binder.java:1049)
+	at android.os.Binder.onTransact(Binder.java:877)
+	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4731)
+	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2630)
+	at android.os.Binder.execTransactInternal(Binder.java:1285)
+	at android.os.Binder.execTransact(Binder.java:1244)
+ 
+Host info: host: 'MacBook-Pro-de-Mariano.local', ip: '2800:40:3d:15a:1dcb:9399:fadb:a09c%en0'
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.1', java.version: '17.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:app=/Users/mariano/Documents/Automation/CS/FE/appiumpoc/serenitybdd-appium-poc-main/src/test/resources/app-qa-release.apk, appium:appActivity=com.conduitreactnative.MainActivity, appium:appPackage=com.conduitreactnative.qa, appium:automationName=UIAutomator2, appium:deviceName=emulator-5554, appium:fullReset=false, appium:hub=http://localhost:4723/wd/hub, appium:newCommandTimeout=2000, appium:noReset=false, platformName=ANDROID, appium:platformVersion=13.0}], desiredCapabilities=Capabilities {app: /Users/mariano/Documents/Au..., appActivity: com.conduitreactnative.Main..., appPackage: com.conduitreactnative.qa, automationName: UIAutomator2, deviceName: emulator-5554, fullReset: false, hub: http://localhost:4723/wd/hub, newCommandTimeout: 2000, noReset: false, platformName: ANDROID, platformVersion: 13.0}}]
+Capabilities {app: /Users/mariano/Documents/Au..., appActivity: com.conduitreactnative.Main..., appPackage: com.conduitreactnative.qa, automationName: UIAutomator2, deviceName: emulator-5554, fullReset: false, hub: http://localhost:4723/wd/hub, newCommandTimeout: 2000, noReset: false, platformName: ANDROID, platformVersion: 13.0}
+See below for more details.
+Caused by: org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.conduitreactnative.qa' application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: 'Command '/Users/mariano/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am start -W -n com.conduitreactnative.qa/com.conduitreactnative.MainActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 255'; Command output: 
+Exception occurred while executing 'start':
+java.lang.SecurityException: Permission Denial: starting Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.conduitreactnative.qa/com.conduitreactnative.MainActivity } from null (pid=12770, uid=2000) not exported from uid 10165
+	at com.android.server.wm.ActivityTaskSupervisor.checkStartAnyActivityPermission(ActivityTaskSupervisor.java:1110)
+	at com.android.server.wm.ActivityStarter.executeRequest(ActivityStarter.java:1024)
+	at com.android.server.wm.ActivityStarter.execute(ActivityStarter.java:713)
+	at com.android.server.wm.ActivityTaskManagerService.startActivityAndWait(ActivityTaskManagerService.java:1562)
+	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:3148)
+	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:598)
+	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:208)
+	at com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)
+	at android.os.ShellCommand.exec(ShellCommand.java:38)
+	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:9197)
+	at android.os.Binder.shellCommand(Binder.java:1049)
+	at android.os.Binder.onTransact(Binder.java:877)
+	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4731)
+	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2630)
+	at android.os.Binder.execTransactInternal(Binder.java:1285)
+	at android.os.Binder.execTransact(Binder.java:1244)
+ 
+Host info: host: 'MacBook-Pro-de-Mariano.local', ip: '2800:40:3d:15a:1dcb:9399:fadb:a09c%en0'
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.1', java.version: '17.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:app=/Users/mariano/Documents/Automation/CS/FE/appiumpoc/serenitybdd-appium-poc-main/src/test/resources/app-qa-release.apk, appium:appActivity=com.conduitreactnative.MainActivity, appium:appPackage=com.conduitreactnative.qa, appium:automationName=UIAutomator2, appium:deviceName=emulator-5554, appium:fullReset=false, appium:hub=http://localhost:4723/wd/hub, appium:newCommandTimeout=2000, appium:noReset=false, platformName=ANDROID, appium:platformVersion=13.0}], desiredCapabilities=Capabilities {app: /Users/mariano/Documents/Au..., appActivity: com.conduitreactnative.Main..., appPackage: com.conduitreactnative.qa, automationName: UIAutomator2, deviceName: emulator-5554, fullReset: false, hub: http://localhost:4723/wd/hub, newCommandTimeout: 2000, noReset: false, platformName: ANDROID, platformVersion: 13.0}}]
+Capabilities {app: /Users/mariano/Documents/Au..., appActivity: com.conduitreactnative.Main..., appPackage: com.conduitreactnative.qa, automationName: UIAutomator2, deviceName: emulator-5554, fullReset: false, hub: http://localhost:4723/wd/hub, newCommandTimeout: 2000, noReset: false, platformName: ANDROID, platformVersion: 13.0}
+

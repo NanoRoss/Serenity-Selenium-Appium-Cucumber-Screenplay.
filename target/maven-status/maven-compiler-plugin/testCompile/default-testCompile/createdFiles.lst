@@ -1,0 +1,6 @@
+starter/task/Login.class
+starter/task/NavigateTo.class
+starter/CucumberTestSuite.class
+starter/ui/HomeView.class
+starter/ui/LoginView.class
+starter/stepdefinitions/LogInStepDefinitions.class
